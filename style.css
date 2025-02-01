@@ -1,0 +1,92 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    width:99.9vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column ;
+    
+    
+}
+
+.headers{
+    margin-top: 20px;
+    margin-inline: auto ;
+    text-transform: capitalize;
+    width: 100%;
+    height: 20vh;
+    padding:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(71, 18, 71);
+    color:white;
+    margin-bottom: 50px;
+}
+.cbody{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+   
+    padding: 1.2rem;
+
+    flex-wrap: wrap;
+}
+
+.content{
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 30%;
+    gap:5px;
+    margin: 10px;
+    padding:6px;
+}
+
+.content:hover{
+    box-shadow: 1px 1px 4px 4px white;
+}
+
+.search{
+    display: flex;
+    gap:5px;
+    align-items: center;
+    justify-content: center;
+}
+
+#in{
+    width: 20%;
+    height: 5vh;
+    text-align: center;
+    border-radius: 8px;
+}
+.search button{
+    width:5vw;
+    height: 5vh;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.search button:hover{
+    background-color: blue;
+    transition: all 0.1s ease-in-out;
+    color:white;
+}
+#high{
+    color: yellowgreen;
+    font-family: cursive;
+    font-weight: 500;
+}
+#low{
+    color: red;
+    font-family: cursive;
+    font-weight: 500;
+}
