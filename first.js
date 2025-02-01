@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from "react";
 import ReactDOM from "react-dom/client"
-import CryptoBody from "./component/body"
+import CryptoBody from "body"
 
 function Main(){
 
