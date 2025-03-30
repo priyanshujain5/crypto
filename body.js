@@ -11,10 +11,15 @@ function CryptoBody(){
         const data = await response.json();
         setdata(data);
     }
-    if(location.reload){
-        useEffect(()=>{
-          fetcher(value)
-        },[])
+    function aSorter(){
+        console.log('sorter called a')
+        const sortdata= [...data].sort((a,b)=> a.current_price - b.current_price);
+        setdata(sortdata);
+    }
+     function dSorter(){
+        console.log('sorter called d')
+        const sortdata= [...data].sort((a,b)=> b.current_price - a.current_price);
+        setdata(sortdata);
     }
     
   useCallback(()=>{
@@ -30,6 +35,8 @@ function CryptoBody(){
            <div className="search">
             <input type="text" id="in" value={value} onChange={(e)=> setvalue(e.target.value)} placeholder="enter any coin and get magic"></input>
             <button onClick={()=>fetcher(value)}>Search</button>
+             <button onClick={aSorter}>Low to High</button>
+            <button onClick={dSorter}>High to Low</button>
             </div>
         <div className="cbody">
             {
@@ -37,7 +44,7 @@ function CryptoBody(){
 
                     return (
                         <>
-                        <div className="content" key={index}>
+                        <div className="content">
 
                         <img src={value.image}></img>
                         <span>Symbol: {value.symbol}</span>
